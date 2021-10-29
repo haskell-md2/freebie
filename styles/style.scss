@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,800;1,800&display=swap');
+
+
+@import 'extra/defualt.scss';
+@import 'extra/media-requests.scss';
+
+$blue_color: #2500F9;
+
+%font{
+    font-family: 'Poppins', sans-serif;
+}
+
+html { overflow-x: hidden; }
+
+body{
+    background-color: #FFFFFF;
+    & a{
+        text-decoration: none;
+
+    }
+}
+
+header{
+    max-width: 1500px;
+    margin: auto;
+    margin-top: 91px;
+    @extend %font;
+    & .nav-line{
+        display: flex;
+        align-items: center;
+        
+
+        & nav{
+            margin-left: auto;
+            margin-right: 30px;
+            & a{
+                text-decoration: none;
+                color: black;
+                font-size: 18px;
+
+                margin: 10px;
+            }
+
+            @media(max-width: 768px){
+                display: none;
+            }
+        }
+    }
+
+    & .try-button{
+        @media(max-width: 1024px){
+            display: none;
+        }
+    }
+}
+
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+
+}
+
+.section-top{
+    background-color: #FDFDFE;
+    background-image: url("/img//Layer\ 5@1X.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+
+    @extend %font;
+
+    margin-top: 10px;
+
+    &__hello-text{
+        margin-top: 246px;
+        font-size: 18px;
+    }
+
+
+    &__best{
+        font-size: 60px;
+    }
+
+    &__try{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__watch-demo{
+        margin-left: 27px;
+        color: $blue_color;
+    }
+}
+
+.our-place{
+    display: inline-flex;
+    align-items: center;
+    background-color: #E2EAED;
+    border-radius: 20px;
+    padding-right: 30px;
+    &__text{
+        margin-left: 6px;
+    }
+}
+
+.try-button{
+    border: $blue_color solid;
+    background-color: $blue_color;
+    border-radius: 30px;
+    padding: 10px 40px;
+
+    color: #FFFFFF;
+    font-size: 16px;
+    align-items: center;
+    
+}
+
+.row{
+    display: flex;
+    &__margin{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    & img{
+        @media(max-width: 1024px){
+            display: none;
+        }
+    }
+}
+
+.companies{
+
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    & img{
+        @media(max-width: 1024px){
+            display: none;
+        }
+    }
+ 
+
+    &__text{
+
+        @extend %font;
+        font-size: 16px;
+
+        text-align: center;
+        
+    }
+
+    &__logos{
+        margin-left: 100px;      
+    }
+
+    &__logos-line {
+        align-items: center;
+        display: flex;
+    }
+}
+
+
+.features{
+
+    @extend %font;
+    display: flex;
+
+
+    &__header{
+        font-family: 'Poppins, Bold', sans-serif;
+        font-size: 36px;
+        color: #242F51;
+    }
+    &__info-blocks{
+        margin-top: 30px;
+        @media(max-width: 1024px){
+            margin: auto;
+        }
+    }
+
+    &__phone{
+        @media(max-width: 1024px){
+            display: none;
+        }
+    }
+
+    &__information{
+        @media(max-width: 1024px){
+            margin: auto;
+        }
+    }
+}
+
+
+//info block
+%info-block{
+    @extend %font;  
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+%info-block__icon{
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 100px;
+}
+
+%info-block__header{
+    font-family: 'Poppins, Bold', sans-serif;
+    font-size: 20px;
+
+}
+
+%info-block__text{
+    max-width: 300px;
+}
+/////////////////
+
+.info-block-red{
+    
+    @extend %info-block;
+
+    &__icon{
+        @extend %info-block__icon;
+        background-color: #FFECEF;
+    
+    }
+
+    &__header{
+        @extend %info-block__header;
+        color: #F55767;
+    }
+
+    &__text{
+        @extend %info-block__text;
+    }
+}
+
+
+.info-block-blue{
+    
+    @extend %info-block;
+
+    &__icon{
+        @extend %info-block__icon;
+        background-color: #F4F4FF;
+    
+    }
+
+    &__header{
+        @extend %info-block__header;
+        color: #2563FF;
+    }
+
+    &__text{
+        @extend %info-block__text;
+    }
+}
+
+
+.info-block-green{
+    
+    @extend %info-block;
+
+    &__icon{
+        @extend %info-block__icon;
+        background-color: #E4FFEE;
+    
+    }
+
+    &__header{
+        @extend %info-block__header;
+        color: #40975F;
+    }
+
+    &__text{
+        @extend %info-block__text;
+    }
+}

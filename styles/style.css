@@ -1,0 +1,336 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,800;1,800&display=swap");
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header, .section-top, .companies__text, .features, .info-block-red, .info-block-blue, .info-block-green {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  max-width: 1500px;
+  margin: auto;
+  margin-top: 91px;
+}
+
+header .nav-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-line nav {
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+header .nav-line nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  header .nav-line nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  header .try-button {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.section-top {
+  background-color: #FDFDFE;
+  background-image: url("/img//Layer 5@1X.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  margin-top: 10px;
+}
+
+.section-top__hello-text {
+  margin-top: 246px;
+  font-size: 18px;
+}
+
+.section-top__best {
+  font-size: 60px;
+}
+
+.section-top__try {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-top__watch-demo {
+  margin-left: 27px;
+  color: #2500F9;
+}
+
+.our-place {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #E2EAED;
+  border-radius: 20px;
+  padding-right: 30px;
+}
+
+.our-place__text {
+  margin-left: 6px;
+}
+
+.try-button {
+  border: #2500F9 solid;
+  background-color: #2500F9;
+  border-radius: 30px;
+  padding: 10px 40px;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row__margin {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+  .row img {
+    display: none;
+  }
+}
+
+.companies {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .companies img {
+    display: none;
+  }
+}
+
+.companies__text {
+  font-size: 16px;
+  text-align: center;
+}
+
+.companies__logos {
+  margin-left: 100px;
+}
+
+.companies__logos-line {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.features__header {
+  font-family: 'Poppins, Bold', sans-serif;
+  font-size: 36px;
+  color: #242F51;
+}
+
+.features__info-blocks {
+  margin-top: 30px;
+}
+
+@media (max-width: 1024px) {
+  .features__info-blocks {
+    margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .features__phone {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .features__information {
+    margin: auto;
+  }
+}
+
+.info-block-red, .info-block-blue, .info-block-green {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.info-block-red__icon, .info-block-blue__icon, .info-block-green__icon {
+  margin-right: 30px;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.info-block-red__header, .info-block-blue__header, .info-block-green__header {
+  font-family: 'Poppins, Bold', sans-serif;
+  font-size: 20px;
+}
+
+.info-block-red__text, .info-block-blue__text, .info-block-green__text {
+  max-width: 300px;
+}
+
+.info-block-red__icon {
+  background-color: #FFECEF;
+}
+
+.info-block-red__header {
+  color: #F55767;
+}
+
+.info-block-blue__icon {
+  background-color: #F4F4FF;
+}
+
+.info-block-blue__header {
+  color: #2563FF;
+}
+
+.info-block-green__icon {
+  background-color: #E4FFEE;
+}
+
+.info-block-green__header {
+  color: #40975F;
+}
+/*# sourceMappingURL=style.css.map */
